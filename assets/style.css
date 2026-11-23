@@ -62,13 +62,13 @@ p{margin:0 0 12px;max-width:68ch}
 .tech li{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
 .tech i{font:700 11px/1 "IBM Plex Mono",monospace;font-style:normal;color:#fff;background:var(--c);width:30px;height:30px;border-radius:7px;display:grid;place-items:center}
 .visual{position:relative;aspect-ratio:1/1.02;max-width:480px;width:100%;justify-self:end}
-.circle{position:absolute;inset:6% 4% 14% 10%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8f82ff,var(--acc) 60%,#3f31b8)}
+.circle{position:absolute;left:7%;top:3%;width:86%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8f82ff,var(--acc) 60%,#3f31b8)}
 .dotgrid{position:absolute;right:0;top:0;fill:color-mix(in srgb,var(--acc) 55%,transparent)}
 .photo{position:absolute;left:22%;right:16%;top:12%;bottom:6%;border:2px dashed rgba(255,255,255,.85);border-radius:16px 16px 0 0;display:grid;place-items:start center;text-align:center;color:#fff;background:rgba(255,255,255,.1);padding:15% 16px 16px}
 .photo strong{display:block;font-size:18px;margin-bottom:4px}
 .photo .small{color:rgba(255,255,255,.85)}
-img.photo{border:0;object-fit:cover;object-position:top;background:none;padding:0}
-.codecard{position:absolute;right:-2%;bottom:10%;width:min(250px,58%);background:#141625;color:#d6dbf0;border:1px solid #33385a;border-radius:10px;box-shadow:0 18px 40px rgba(20,16,60,.28);padding:10px 14px 12px}
+img.photo{left:13%;top:9%;right:auto;bottom:auto;width:74%;height:auto;aspect-ratio:1;border:6px solid #fff;border-radius:50%;object-fit:cover;object-position:50% 25%;background:#e9e9e9;padding:0;box-shadow:0 14px 34px rgba(40,30,120,.25)}
+.codecard{position:absolute;right:-3%;bottom:-6%;width:min(250px,58%);background:#141625;color:#d6dbf0;border:1px solid #33385a;border-radius:10px;box-shadow:0 18px 40px rgba(20,16,60,.28);padding:10px 14px 12px}
 .cc-top{display:flex;justify-content:space-between;align-items:center;font:12px/1 "IBM Plex Mono",monospace;color:#9aa0c2;margin-bottom:8px}
 .cc-top i{width:8px;height:8px;border-radius:50%;background:#3dd68c}
 .codecard pre{margin:0;padding:0;background:none;font:12px/1.6 "IBM Plex Mono",monospace;color:#d6dbf0;overflow:hidden}
