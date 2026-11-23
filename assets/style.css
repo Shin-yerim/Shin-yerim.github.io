@@ -62,8 +62,6 @@ p{margin:0 0 12px;max-width:68ch}
 .tech li{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
 .tech i{font:700 11px/1 "IBM Plex Mono",monospace;font-style:normal;color:#fff;background:var(--c);width:30px;height:30px;border-radius:7px;display:grid;place-items:center}
 .visual{position:relative;aspect-ratio:1/1.02;max-width:480px;width:100%;justify-self:end}
-.portrait{position:absolute;left:7%;width:86%;aspect-ratio:86/100;bottom:12.7%;overflow:hidden;border-radius:0 0 50% 50%/0 0 43% 43%}
-.portrait img{position:absolute;left:2.5%;width:95%;top:7.5%;max-width:none}
 .circle{position:absolute;left:7%;top:3%;width:86%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8f82ff,var(--acc) 60%,#3f31b8)}
 .dotgrid{position:absolute;right:0;top:0;fill:color-mix(in srgb,var(--acc) 55%,transparent)}
 .photo{position:absolute;left:22%;right:16%;top:12%;bottom:6%;border:2px dashed rgba(255,255,255,.85);border-radius:16px 16px 0 0;display:grid;place-items:start center;text-align:center;color:#fff;background:rgba(255,255,255,.1);padding:15% 16px 16px}
@@ -182,9 +180,6 @@ pre{background:var(--code);padding:16px 18px;border-radius:8px;overflow-x:auto;f
   .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:560px){
-  .codecard{right:0;bottom:-14%;width:56%;padding:8px 10px}
-  .visual{margin-bottom:70px}
-  .codecard pre{font-size:10px}
   .numbers{grid-template-columns:minmax(0,1fr)}
   .btn.sm{display:none}
   .list li{grid-template-columns:minmax(0,1fr);gap:2px}
