@@ -1,4 +1,5 @@
 /*
+HERO    밝은 바탕 + 보라 포인트(이름, 원, 버튼, 아이콘)
 VOICE   차분한 엔지니어링 보고서. 꾸밈보다 근거(그림·코드·수치)가 먼저 보이게
 IDEA    설계 문서와 프로젝트 쇼케이스를 합친 한 장짜리 이력 사이트
 PICTURE 첫 화면 오른쪽 사진 자리, 프로젝트는 실제 발표 표지와 서비스 화면 썸네일
@@ -43,21 +44,44 @@ p{margin:0 0 12px;max-width:68ch}
 .muted{color:var(--sub)}.small{font-size:14px}
 .todo{color:var(--bad)}
 
-/* hero */
-.hero{padding:clamp(40px,6vw,88px) 0 0;border:0}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center}
-.role{font-weight:600;color:var(--acc);margin-bottom:10px}
-.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.02;margin:0 0 18px;letter-spacing:-.03em}
-.hero .statement{font-size:clamp(20px,2.4vw,28px);line-height:1.45;margin:0 0 22px;max-width:none}
-.tags{display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;list-style:none}
-.tags li{font-size:13.5px;padding:3px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--sub);background:var(--panel)}
-.photo{aspect-ratio:4/5;border:1.5px dashed var(--mute);border-radius:14px;display:grid;place-items:center;text-align:center;color:var(--sub);background:repeating-linear-gradient(135deg,transparent 0 14px,color-mix(in srgb,var(--rule) 45%,transparent) 14px 15px);padding:24px}
-.photo strong{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
-.numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--ink)}
-.numbers div{padding:20px 18px 8px 0}
-.numbers b{display:block;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}
-.numbers div:nth-child(2) b{color:var(--acc)}
-.numbers span{font-size:14px;color:var(--sub)}
+/* hero — 레퍼런스: 이름 강조, 보라 원 위 사진, 코드 카드, 기술 줄, 아이콘 숫자 */
+.hero{padding:clamp(40px,6vw,80px) 0 clamp(36px,5vw,64px);border:0;
+  background:radial-gradient(900px 520px at 88% 30%,color-mix(in srgb,var(--acc) 16%,transparent),transparent 70%),linear-gradient(var(--hero),var(--bg));}
+:root{--hero:light-dark(#f3f1ff,#17152b)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.pill{display:inline-block;font:600 12.5px/1 "IBM Plex Sans KR",sans-serif;letter-spacing:.08em;color:var(--acc);background:var(--tint);padding:8px 12px;border-radius:6px;margin-bottom:18px}
+.hero h1{font-size:clamp(42px,6.2vw,76px);line-height:1.05;margin:0 0 16px;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero .statement{font-size:clamp(20px,2.3vw,28px);line-height:1.45;margin:0 0 12px;font-weight:600}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 30px}
+.btn{display:inline-flex;align-items:center;gap:6px;min-height:46px;padding:0 20px;border-radius:8px;border:1.5px solid var(--ink);text-decoration:none;font-weight:600;background:var(--panel)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn:not(.primary):hover{border-color:var(--acc);color:var(--acc)}
+.btn.sm{min-height:38px;padding:0 14px;font-size:14px;margin-left:8px;color:#fff!important}
+.tech-label{font:600 12px/1 "IBM Plex Sans KR",sans-serif;letter-spacing:.1em;color:var(--sub);margin:0 0 12px}
+.tech{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 16px}
+.tech li{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600}
+.tech i{font:700 11px/1 "IBM Plex Mono",monospace;font-style:normal;color:#fff;background:var(--c);width:30px;height:30px;border-radius:7px;display:grid;place-items:center}
+.visual{position:relative;aspect-ratio:1/1.02;max-width:480px;width:100%;justify-self:end}
+.circle{position:absolute;inset:6% 4% 14% 10%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8f82ff,var(--acc) 60%,#3f31b8)}
+.dots{position:absolute;right:0;top:0;fill:color-mix(in srgb,var(--acc) 55%,transparent)}
+.photo{position:absolute;left:22%;right:16%;top:12%;bottom:6%;border:2px dashed rgba(255,255,255,.85);border-radius:16px 16px 0 0;display:grid;place-items:start center;text-align:center;color:#fff;background:rgba(255,255,255,.1);padding:15% 16px 16px}
+.photo strong{display:block;font-size:18px;margin-bottom:4px}
+.photo .small{color:rgba(255,255,255,.85)}
+img.photo{border:0;object-fit:cover;object-position:top;background:none;padding:0}
+.codecard{position:absolute;right:-2%;bottom:10%;width:min(250px,58%);background:#141625;color:#d6dbf0;border:1px solid #33385a;border-radius:10px;box-shadow:0 18px 40px rgba(20,16,60,.28);padding:10px 14px 12px}
+.cc-top{display:flex;justify-content:space-between;align-items:center;font:12px/1 "IBM Plex Mono",monospace;color:#9aa0c2;margin-bottom:8px}
+.cc-top i{width:8px;height:8px;border-radius:50%;background:#3dd68c}
+.codecard pre{margin:0;padding:0;background:none;font:12px/1.6 "IBM Plex Mono",monospace;color:#d6dbf0;overflow:hidden}
+.codecard .k{color:#d6dbf0}.codecard .s{color:#8fa6ff}.codecard .v{color:#f0a04b}
+.numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:clamp(36px,5vw,60px)}
+.numbers>div{display:flex;gap:14px;align-items:flex-start;background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:18px}
+.ico{flex:none;width:44px;height:44px;border-radius:10px;background:var(--acc);display:grid;place-items:center}
+.ico svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.numbers p{margin:0}
+.numbers b{display:block;font-size:clamp(24px,2.6vw,32px);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}
+.numbers p span{font-size:13.5px;color:var(--sub);line-height:1.45;display:block;margin-top:4px}
 
 /* about */
 .traits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin:8px 0 48px}
@@ -144,7 +168,7 @@ pre{background:var(--code);padding:16px 18px;border-radius:8px;overflow-x:auto;f
 
 @media(max-width:860px){
   .hero-grid{grid-template-columns:minmax(0,1fr)}
-  .photo{max-width:340px;aspect-ratio:4/4.4}
+  .visual{justify-self:center;max-width:400px}
   .numbers{grid-template-columns:repeat(2,minmax(0,1fr))}
   .traits,.facts{grid-template-columns:minmax(0,1fr)}
   .two,.contact,.cols{grid-template-columns:minmax(0,1fr)}
@@ -155,6 +179,8 @@ pre{background:var(--code);padding:16px 18px;border-radius:8px;overflow-x:auto;f
   .meta{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:560px){
+  .numbers{grid-template-columns:minmax(0,1fr)}
+  .btn.sm{display:none}
   .list li{grid-template-columns:minmax(0,1fr);gap:2px}
   .skills th{width:auto;display:block;padding-bottom:0;border:0}
   .skills td{display:block;padding-top:2px}
