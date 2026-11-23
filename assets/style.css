@@ -65,7 +65,7 @@ p{margin:0 0 12px;max-width:68ch}
 .tech i{font:700 11px/1 "IBM Plex Mono",monospace;font-style:normal;color:#fff;background:var(--c);width:30px;height:30px;border-radius:7px;display:grid;place-items:center}
 .visual{position:relative;aspect-ratio:1/1.02;max-width:480px;width:100%;justify-self:end}
 .circle{position:absolute;inset:6% 4% 14% 10%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#8f82ff,var(--acc) 60%,#3f31b8)}
-.dots{position:absolute;right:0;top:0;fill:color-mix(in srgb,var(--acc) 55%,transparent)}
+.dotgrid{position:absolute;right:0;top:0;fill:color-mix(in srgb,var(--acc) 55%,transparent)}
 .photo{position:absolute;left:22%;right:16%;top:12%;bottom:6%;border:2px dashed rgba(255,255,255,.85);border-radius:16px 16px 0 0;display:grid;place-items:start center;text-align:center;color:#fff;background:rgba(255,255,255,.1);padding:15% 16px 16px}
 .photo strong{display:block;font-size:18px;margin-bottom:4px}
 .photo .small{color:rgba(255,255,255,.85)}
@@ -82,6 +82,9 @@ img.photo{border:0;object-fit:cover;object-position:top;background:none;padding:
 .numbers p{margin:0}
 .numbers b{display:block;font-size:clamp(24px,2.6vw,32px);line-height:1.1;letter-spacing:-.02em;white-space:nowrap}
 .numbers p span{font-size:13.5px;color:var(--sub);line-height:1.45;display:block;margin-top:4px}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;list-style:none}
+.tags li{font-size:13.5px;padding:3px 10px;border:1px solid var(--rule);border-radius:999px;color:var(--sub);background:var(--panel)}
 
 /* about */
 .traits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin:8px 0 48px}

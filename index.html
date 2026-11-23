@@ -44,7 +44,7 @@
           </ul>
         </div>
         <div class="visual">
-          <svg class="dots" width="120" height="72" aria-hidden="true"><defs><pattern id="d" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2"/></pattern></defs><rect width="120" height="72" fill="url(#d)"/></svg>
+          <svg class="dotgrid" width="120" height="72" aria-hidden="true"><defs><pattern id="d" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2"/></pattern></defs><rect width="120" height="72" fill="url(#d)"/></svg>
           <div class="circle"></div>
           <div class="photo" role="img" aria-label="프로필 사진 자리">
             <div><strong>사진 넣을 자리</strong><span class="small">배경을 지운 PNG를 넣으면<br>보라 원 위에 서 있는 모습이 돼요</span></div>
@@ -121,7 +121,7 @@
       <div class="sec-head"><span class="sec-no">03 /</span><h2>프로젝트</h2></div>
       <div class="cards">
         <a class="card wide" href="projects/auditflow.html">
-          <img class="thumb" style="background:#c1e0de" src="assets/img/thumb-auditflow.jpg" alt="AuditFlow AI 발표 표지 — 증빙이 AI 검증 관문을 지나 Front Room으로 가는 그림" loading="lazy">
+          <img class="thumb" style="background:#f5efe4" src="assets/img/thumb-auditflow-screen.jpg" alt="AuditFlow AI Command Center 화면 — Action Item 현황, 단계별 진행, 사유별 Error 건수, 사무실 현황" loading="lazy">
           <div class="body">
             <div class="kicker"><b>PostgreSQL · 데이터 검증 · 거버넌스</b><span>2026.11 · 3명</span></div>
             <h3>AuditFlow AI</h3>
@@ -149,19 +149,20 @@
             <span class="more">프로젝트 살펴보기 →</span>
           </div>
         </a>
-        <div class="card">
-          <div class="typo"><b>7단계</b><span>근거가 없으면 멈추는 상담 흐름</span></div>
+        <a class="card" href="projects/legaldesk.html">
+          <img class="thumb" style="background:#1d2340" src="assets/img/thumb-legal.jpg" alt="Legal Desk 발표 표지 — 공식 법령 근거를 확인하는 대화형 법률정보 서비스" loading="lazy">
           <div class="body">
-            <div class="kicker"><b>LLM 에이전트</b><span>2026.09 · 4명</span></div>
+            <div class="kicker"><b>LLM 워크플로우 · 법률 도메인</b><span>2026.09 · 4명</span></div>
             <h3>Legal Desk</h3>
-            <p class="one">법령·판례를 조회해 근거 조문이 확보될 때만 결론을 만드는 상담 앱</p>
+            <p class="one">공식 법령 근거를 확인했을 때만 답하는 대화형 법률정보 서비스</p>
             <dl>
-              <dt>역할</dt><dd>기록상 역할: 실제 활용 도구 구축 <span class="todo">(개인 구현 범위 확인 필요)</span></dd>
-              <dt>내용</dt><dd>Tool Calling → Python이 순서를 관리하는 Flow, 법률명 정확 대조, 조문 후보 16개·30,000자 묶음</dd>
+              <dt>역할</dt><dd>기획 · 검증 (법률 도메인). 초반 프로젝트라 역할을 나누지 않고 함께 구현</dd>
+              <dt>결과</dt><dd>같은 10개 사례 회귀 테스트: 통과 1 → 3건, 개선 6 · 악화 2 · 동일 2</dd>
             </dl>
             <ul class="tags"><li>LangChain LCEL</li><li>Pydantic</li><li>국가법령정보센터 API</li></ul>
+            <span class="more">프로젝트 살펴보기 →</span>
           </div>
-        </div>
+        </a>
         <div class="card">
           <div class="typo"><b>136 쿼리 · 373행</b><span>mysqldump 콜드 백업 복원</span></div>
           <div class="body">
